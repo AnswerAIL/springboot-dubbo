@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+    <dubbo:application id="answer-dubbo-consumer" name="answer-dubbo-consumer" />
+
+    <dubbo:registry address="zookeeper://192.168.XXX.XXX:2181" />
+
+    <!-- dubbo 协议在 20880 端口暴露服务， dubbo默认使用 20880 端口暴露服务 -->
+    <dubbo:protocol id="dubbo" name="dubbo" port="20880"/>
+
+    <!-- 生成远程服务代理，可以和本地bean一样调用 -->
+    <dubbo:reference id="answerService" interface="com.answer.springboot.dubbo.service.IAnswerService" />
+    <dubbo:reference id="userService" interface="com.answer.springboot.dubbo.service.IUserService" />
+
+</beans>

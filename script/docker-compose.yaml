@@ -1,0 +1,27 @@
+# 启动命令： docker-compose -f docker-compose.yaml up -d
+version: "2"
+
+networks:
+  block:
+
+services:
+  zookeeper:
+    container_name: answer_zk
+    hostname: answer_zk
+    image: hyperledger/fabric-zookeeper
+    environment:
+      - ZOO_MY_ID=1
+    networks:
+      - block
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 2181:2181
+      - 2888:2888
+      - 3888:3888
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200M"
+        max-file: "5"
+
