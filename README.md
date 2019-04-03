@@ -65,7 +65,7 @@
     
     # 5: 运行 ConsumerApplication 服务
     
-    # 5: 访问
+    # 6: 访问接口并验证
     http://127.0.0.1:9093/sdc/notice/answer
     http://127.0.0.1:9093/sdc/insertUser/answer
     http://127.0.0.1:9093/sdc/findUser/answer
@@ -84,7 +84,7 @@
     # 查看命令行帮助， 命令行不熟悉的可使用 zk 可视化图形工具
     help
 ```
- - [zookeeper可视化图形工具下载]()
+ - [zookeeper可视化图形工具下载](https://download.csdn.net/download/u010979642/11085634)
 
 &nbsp;
 
