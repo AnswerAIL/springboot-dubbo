@@ -56,6 +56,7 @@
 ### 项目运行
 ```bash
     # 1: 拉取 springboot-dubbo 项目到本地
+    https://github.com/AnswerAIL/springboot-dubbo
     
     # 2: 修改 spring-dubbo.xml 配置文件中 zookeeper 的注册地址 dubbo:registry address
     
