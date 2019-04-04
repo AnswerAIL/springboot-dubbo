@@ -20,7 +20,7 @@
     
     cd dubbo-admin/
     
-    # 编译源码
+    # 编译打包
     mvn package
     
     cd target/
